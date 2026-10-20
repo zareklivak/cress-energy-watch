@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.superpowers/
+# third-party marketing screenshots and personal reference images: local reference only
+research/screenshots/
+inspiration/
+verify/
+test-results/
+playwright-report/
+
+# private data: never commit
+private/
+.env.local
+
+.vercel
+.env*

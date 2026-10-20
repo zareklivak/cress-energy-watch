@@ -1,0 +1,8 @@
+{
+  "rows": [
+    { "month": "2026-06", "m3": 1000, "m7": 1100, "m1": 1200, "m2": 1300, "pool": 1400, "m4": 1500, "m5": 1600, "m6": 1700, "total_cuft": 10800, "rate": 0.06, "calc_cost": 648, "billed": 648, "budget": 700 },
+    { "month": "2026-07", "m3": 1010, "m7": 1110, "m1": 1210, "m2": 1310, "pool": 1410, "m4": 1510, "m5": 1610, "m6": 1710, "total_cuft": 10880, "rate": 0.06, "calc_cost": 653, "billed": 653, "budget": 700 },
+    { "month": "2026-08", "m3": 990, "m7": 1090, "m1": 1190, "m2": 1290, "pool": 1390, "m4": 1490, "m5": 1590, "m6": 1690, "total_cuft": 10720, "rate": 0.06, "calc_cost": 643, "billed": 643, "budget": 700 }
+  ],
+  "notes": ["Meter names were read from the column headings."]
+}

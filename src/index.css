@@ -1,0 +1,104 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/instrument-sans';
+@import '@fontsource-variable/newsreader';
+
+@theme {
+  --color-page: #f2f2ee;
+  --color-card: #ffffff;
+  --color-sunk: #ebebe5;
+  --color-ink: #1d2321;
+  --color-mute: #626a66;
+  --color-line: #e2dfd6;
+  --color-bar: #b7c6bf;
+  --color-accent: #1f5a4a;
+  --color-accent-strong: #174538;
+  --color-accent-soft: #e3eee9;
+  --color-high: #b3381f;
+  --color-high-soft: #f8e1db;
+  --color-medium: #85580a;
+  --color-medium-mark: #c98a1b;
+  --color-medium-soft: #faefd6;
+  --color-info: #45535e;
+  --color-info-soft: #e7ebee;
+  --font-sans: 'Instrument Sans Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Newsreader Variable', ui-serif, Georgia, serif;
+  --color-sidebar: #f8f7f3;
+  --color-note: #fcf7ec;
+  --color-map: #e7ece8;
+  --radius-card: 14px;
+  --shadow-card: 0 1px 2px rgba(29, 35, 33, 0.04);
+  --shadow-sheet: 0 8px 30px rgba(29, 35, 33, 0.06);
+  --shadow-thumb: 0 1px 2px rgba(29, 35, 33, 0.12);
+
+  /* Type scale: every text size in the app comes from here. */
+  --text-micro: 11px;
+  --text-caption: 12px;
+  --text-meta: 13px;
+  --text-body: 14px;
+  --text-lead: 15px;
+  --text-title: 17px;
+  --text-heading: 20px;
+  --text-stat: 22px;
+  --text-figure: 26px;
+  --text-display: 30px;
+  --text-report: 38px;
+  --text-hero: 44px;
+}
+
+html {
+  background: var(--color-page);
+  color: var(--color-ink);
+}
+body {
+  font-family: var(--font-sans);
+  font-feature-settings: 'tnum' 1;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+}
+.num {
+  font-variant-numeric: tabular-nums;
+}
+/* One visible focus ring for every interactive element (keyboard only). */
+:where(a, button, summary, select, input, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+[tabindex='-1']:focus {
+  outline: none;
+}
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  html,
+  body {
+    background: #fff;
+  }
+  .print-page {
+    box-shadow: none !important;
+    border: 0 !important;
+    margin: 0 !important;
+    max-width: none !important;
+  }
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
